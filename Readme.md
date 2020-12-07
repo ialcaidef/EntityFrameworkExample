@@ -1,11 +1,12 @@
-## Cómo usamos Entity Framework Core
+## CÃ³mo usamos Entity Framework Core
 
-En este ejemplo usaremos SQLite para persistir la información. Lo instalaremos a través **NuGet Package Manager** buscando el tipo **Microsoft.EntityFrameworkCore.Sqlite**
+En este ejemplo usaremos SQLite para persistir la informaciÃ³n. Lo instalaremos a travÃ©s **NuGet Package Manager** buscando el tipo **Microsoft.EntityFrameworkCore.Sqlite**
 
 El ejemplo consiste en realizar un CRUD sobre la entidad **Person**
 
-'''
-public IActionResult Index()
+~~~
+
+        public IActionResult Index()
         {
             //return View();
             return View(_context.People.ToList());
@@ -34,4 +35,5 @@ public IActionResult Index()
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-''''
+        
+~~~
